@@ -1,11 +1,11 @@
 body{
-    background: #eee;
+    background: black;
     color: #333;
     font-family: sans-serif;
     font-size:15px;
    }
    #wrapper{
-    background: #fff;
+    background: black;
     width: 1100px;
     margin: 20px auto;
    }
@@ -15,7 +15,7 @@ body{
    }
    #wrapper header hgroup{
     float: left;
-    color: #fff;
+    color: black;
    }
    #wrapper header nav{
     float: right;
@@ -31,21 +31,20 @@ body{
    }
    #wrapper header nav ul li a{
     padding: 15px;
-    color: #fff;
+    color: black;
     text-decoration: none;
    }
    .clear{
     clear: both;
    }
    footer{
-    background: white;
+    background: black;
     padding: 20px;
    }
    footer a{
-    color: #fff;
-    text-decoration:none;
+    color: black;
+    text-decoration: none;
    }
    section{
     padding: 20px;
-   }
-   
+   } 

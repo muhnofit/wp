@@ -15,7 +15,7 @@ body{
    }
    #wrapper header hgroup{
     float: left;
-    color: #fff;
+    color: white;
    }
    #wrapper header nav{
     float: right;
@@ -31,18 +31,18 @@ body{
    }
    #wrapper header nav ul li a{
     padding: 15px;
-    color: #fff;
+    color: white;
     text-decoration: none;
    }
    .clear{
     clear: both;
    }
    footer{
-    background: #232323;
+    background: rgb(254, 251, 251);
     padding: 20px;
    }
    footer a{
-    color: #fff;
+    color:white;
     text-decoration: none;
    }
    section{

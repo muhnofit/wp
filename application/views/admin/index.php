@@ -9,7 +9,7 @@ primary">
         <div class="card-body">
          <div class="row no-gutters align-items-center">
           <div class="col mr-2">
-           <div class="text-md font-weight-bold text-black text uppercase mb-1">Jumlah Anggota</div>
+           <div class="text-md font-weight-bold text-black text uppercase mb-1">User account</div>
             <div class="h1 mb-0 font-weight-bold text-black"><?=
 $this->ModelUser->getUserWhere(['role_id' => 1])->num_rows(); 
 ?></div>
@@ -27,7 +27,7 @@ class="fas fa-users fa-3x text-warning"></i></a>
  <div class="card-body">
  <div class="row no-gutters align-items-center">
  <div class="col mr-2">
- <div class="text-md font-weight-bold text-black text uppercase mb-1">Stok Buku Terdaftar</div>
+ <div class="text-md font-weight-bold text-black text uppercase mb-1">User</div>
  <div class="h1 mb-0 font-weight-bold text-black">
  <?php
  $where = ['stok != 0'];
@@ -38,7 +38,8 @@ echo $totalstok;
  </div>
  </div>
  <div class="col-auto">
- <a href="<?= base_url('buku'); ?>"><i class="fas fa book fa-3x text-primary"></i></a>
+ <a href="<?= base_url('buku'); ?>"><i
+ class="fas fa-home fa-3x text-black"></i></a>
  </div>
  </div>
  </div>
@@ -49,7 +50,7 @@ echo $totalstok;
  <div class="card-body">
  <div class="row no-gutters align-items-center">
  <div class="col mr-2">
- <div class="text-md font-weight-bold text-black text uppercase mb-1">Buku yang dipinjam</div>
+ <div class="text-md font-weight-bold text-black text uppercase mb-1">News</div>
  <div class="h1 mb-0 font-weight-bold text-black">
  <?php
  $where = ['dipinjam != 0'];
@@ -60,7 +61,8 @@ $where);
  </div>
  </div>
  <div class="col-auto">
- <a href="<?= base_url('user'); ?>"><i class="fas fa user-tag fa-3x text-success"></i></a>
+ <a href="<?= base_url('user'); ?>"><i 
+ class="fas fa-newspaper fa-3x"></i></a>
  </div>
  </div>
  </div>
@@ -71,7 +73,7 @@ $where);
  <div class="card-body">
  <div class="row no-gutters align-items-center">
  <div class="col mr-2">
- <div class="text-md font-weight-bold text-black text uppercase mb-1">Buku yang dibooking</div>
+ <div class="text-md font-weight-bold text-black text uppercase mb-1">Messages</div>
  <div class="h1 mb-0 font-weight-bold text-black">
  <?php
  $where = ['dibooking !=0'];
@@ -81,7 +83,8 @@ $where);
  </div>
  </div>
  <div class="col-auto">
- <a href="<?= base_url('user'); ?>"><i class="fas fa shopping-cart fa-3x text-danger"></i></a>
+ <a href="<?= base_url('user'); ?>"><i 
+ class="fas fa-envelope fa-3x text-danger"></i></a>
  </div>
  </div>
  </div>
@@ -93,12 +96,9 @@ $where);
  <hr class="sidebar-divider">
  <!-- row table-->
  <div class="row">
- <div class="table-responsive table-bordered col-sm-5 ml-auto mr auto mt-2">
- <div class="page-header">
- <span class="fas fa-users text-primary mt-2 "> Data 
-User</span>
- <a class="text-danger" href="<?php echo 
-base_url('user/data_user'); ?>"><i class="fas fa-search mt-2 float right"> Tampilkan</i></a>
+ <div class="table-responsive table col-sm-13 ml-auto mr auto mt-2">
+ <div class="page-header" >
+ <span class="fas fa-users text-primary mt-5 "> User account</span>
  </div>
  <table class="table mt-3">
  <thead>
@@ -106,7 +106,7 @@ base_url('user/data_user'); ?>"><i class="fas fa-search mt-2 float right"> Tampi
  <th>#</th>
  <th>Nama Anggota</th>
  <th>Email</th>
- <th>Role ID</th>
+ <th>Role id</th>
  <th>Aktif</th>
  <th>Member Sejak</th>
  </tr>
@@ -127,42 +127,6 @@ base_url('user/data_user'); ?>"><i class="fas fa-search mt-2 float right"> Tampi
  </tbody>
  </table>
  </div>
- <div class="table-responsive table-bordered col-sm-5 ml-auto mr auto mt-2">
- <div class="page-header">
- <span class="fas fa-book text-warning mt-2"> Data 
-Buku</span>
- <a href="<?= base_url('buku'); ?>"><i class="fas fa-search 
-text-primary mt-2 float-right"> Tampilkan</i></a>
- </div>
- <div class="table-responsive">
- <table class="table mt-3" id="table-datatable">
- <thead>
- <tr>
- <th>#</th>
- <th>Judul Buku</th>
- <th>Pengarang</th>
- <th>Penerbit</th>
- <th>Tahun Terbit</th>
- <th>ISBN</th>
- <th>Stok</th>
- </tr>
- </thead>
- <tbody>
- <?php
- $i = 1;
- foreach ($buku as $b) { ?>
- <tr>
- <td><?= $i++; ?></td>
- <td><?= $b['judul_buku']; ?></td>
- <td><?= $b['pengarang']; ?></td>
- <td><?= $b['penerbit']; ?></td>
- <td><?= $b['tahun_terbit']; ?></td>
- <td><?= $b['isbn']; ?></td>
- <td><?= $b['stok']; ?></td>
- </tr>
- <?php } ?>
- </tbody>
- </table>
  </div>
  </div>
  </div>

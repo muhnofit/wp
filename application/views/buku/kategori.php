@@ -9,13 +9,13 @@
  </div>
  <?php }?>
  <?= $this->session->flashdata('pesan'); ?>
- <a href="" class="btn btn-primary mb-3" datatoggle="modal" data-target="#kategoriBaruModal"><i class="fas fafile-alt"></i> Tambah Kategori</a>
+ <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#kategoriBaruModal"><i class="fas fa-plus"></i> Tambah Menu baru</a>
  <table class="table table-hover">
  <thead>
  <tr>
  <th scope="col">#</th>
- <th scope="col">Kategori</th>
- <th scope="col">Pilihan</th>
+ <th scope="col">Menu</th>
+ <th scope="col">Action</th>
  </tr>
  </thead>
  <tbody>
@@ -45,13 +45,13 @@ Hapus</a>
 <!-- End of Main Content -->
 <!-- Modal Tambah kategori baru-->
 <div class="modal fade" id="kategoriBaruModal" tabindex="-1"
-role="dialog" aria-labelledby="kategoriBaruModalLabel" ariahidden="true">
+role="dialog" aria-labelledby="kategoriBaruModalLabel" aria-hidden="true">
  <div class="modal-dialog" role="document">
  <div class="modal-content">
  <div class="modal-header">
  <h5 class="modal-title"
-id="kategoriBaruModalLabel">Tambah Kategori</h5>
- <button type="button" class="close" datadismiss="modal" aria-label="Close">
+id="kategoriBaruModalLabel">Tambah Menu baru</h5>
+ <button type="button" class="close" data-dismiss="modal" aria-label="Close">
  <span aria-hidden="true">&times;</span>
  </button>
  </div>
@@ -59,10 +59,10 @@ id="kategoriBaruModalLabel">Tambah Kategori</h5>
 method="post">
  <div class="modal-body">
  <div class="form-group">
-<input type = "text" name="kategori" id="kategori" placeholder="masukan nama kategori" 
+<input type = "text" name="kategori" id="kategori" placeholder="masukan menu baru" 
 class="from-control-form-control-user">
  </div>
-f</div>
+</div>
  <div class="modal-footer">
  <button type="button" class="btn btn-secondary"
 data-dismiss="modal"><i class="fas fa-ban"></i> Close</button>

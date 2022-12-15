@@ -11,7 +11,7 @@ class Buku extends CI_Controller
 //manajemen Buku
 public function kategori()
  {
- $data['judul'] = 'Kategori Buku';
+ $data['judul'] = 'Menu Management';
  $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
  $data['kategori'] = $this->ModelBuku->getKategori()->result_array();
  $this->form_validation->set_rules('kategori', 'Kategori', 
@@ -41,7 +41,7 @@ redirect('buku/kategori');
 //manajemen Buku
 public function index()
 {
-$data['judul'] = 'Data Buku';
+$data['judul'] = 'Submenu Management';
 $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
 $data['buku'] = $this->ModelBuku->getBuku()->result_array();
 $data['kategori'] = $this->ModelBuku->getKategori()->result_array();

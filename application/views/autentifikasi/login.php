@@ -1,4 +1,4 @@
-<div class="container">
+  <div class="container">
     <!-- Outer Row -->
     <div class="row justify-content-center">
  
@@ -37,11 +37,12 @@ btn-primary btn-user btn-block">
                         </form>
                         <hr>
                         <div class="text-center">
-                            <a class="small" href="<?=base_url('autentifikasi/lupaPassword'); ?>">Lupa Password?</a>
+                        <h4 class="h5 text-gray-900 mb-4">daftar menjadi member !</h4>
                         </div>
                         <div class="text-center">
                             <a class="small" href="<?=base_url('autentifikasi/registrasi'); ?>">Daftar Member!</a>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
